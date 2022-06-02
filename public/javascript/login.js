@@ -1,3 +1,5 @@
+
+
 async function signupFormHandler(event) {
     event.preventDefault();
     const username = document.querySelector('#username-signup').value.trim();
@@ -48,6 +50,22 @@ async function loginFormHandler(event) {
       }
     }
   };
+
+  function signupInstead (event) {
+    event.preventDefault();
+    document.querySelector('.signup-form').style.display = "block";
+
+    document.querySelector('.login-form').style.display = "none";
+  };
+
+  function signInInstead (event) {
+    event.preventDefault();
+    document.querySelector('.login-form').style.display = "block";
+    document.querySelector('.signup-form').style.display = "none";
+  }
+
   
+document.querySelector('#sign-up').addEventListener('click', signupInstead);
+document.querySelector('#log-in').addEventListener('click', signInInstead);
 document.querySelector('.signup-form').addEventListener('submit', signupFormHandler);
 document.querySelector('.login-form').addEventListener('submit', loginFormHandler);

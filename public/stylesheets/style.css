@@ -1,0 +1,115 @@
+* {
+    box-sizing: border-box;
+   
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/* HEADER SECTION*/
+
+nav {
+    background-color: rgb(32, 26, 26);
+}
+
+nav a{
+    display: inline-block;
+    color: rgb(187, 237, 220);
+    background-color: rgb(32, 26, 26);
+    font-size: xx-large;
+    margin-right: 100px;
+}
+
+header {
+    background-color: rgb(32, 26, 26);
+    color: rgb(187, 237, 220);
+    padding: 50px;
+}
+
+
+.app-title {
+    background-color: rgb(187, 237, 220);
+    font-size: 75px;
+    padding: 0 12px;
+    display: inline-block;
+    border-radius: 10px;
+    box-shadow: 5px 5px rgb(117, 165, 149);
+}
+h1 > a{
+    color: rgb(32, 26, 26);
+    background-color:rgb(187, 237, 220);
+}
+
+
+/*POST SECTION*/
+
+.post{
+    width: 90%;
+    margin: 10px;
+    border: 2px solid rgb(32, 26, 26);
+    border-radius: 10px;
+
+}
+
+.post_title{
+    background-color: rgb(32, 26, 26);
+    color: rgb(187, 237, 220);
+    padding: 15px;
+    font-size: x-large;
+}
+
+.post_text {
+    font-size: large
+}
+
+/*LOGIN PAGE*/
+
+.welcome {
+    width: 90%;
+    margin: 10px;
+    border: 2px solid rgb(32, 26, 26);
+    background-color: rgb(187, 237, 220);
+    margin: 35px auto;
+}
+
+
+.welcome span {
+    color: rgb(187, 237, 220);
+    background-color: rgb(32, 26, 26);
+    display: block;
+    font-size: xx-large;
+    padding: 15px;
+}
+
+.login-form,.signup-form {
+    padding: 15px;
+    font-size: 30px;
+}
+#email-login, #password-login,  #username-signup, #email-signup, #password-signup{
+    width: 100%;
+    margin: 5px auto;
+    padding: 15px;
+    border: 1px solid rgb(32, 26, 26);
+    border-radius: 15px;
+    font-size: 30px;
+}
+.login-form button, .signup-form button {
+    color:rgb(187, 237, 220);
+    background-color: rgb(32, 26, 26);
+    width: 100%;
+    outline: none;
+    font-size: x-large;
+}
+
+#sign-up, #log-in {
+    text-decoration: underline;
+}
+
+.signup-form {
+    display: none;
+}
