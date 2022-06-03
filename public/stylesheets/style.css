@@ -11,6 +11,9 @@ ul {
     list-style: none;
 }
 
+main {
+    background-color: rgb(187, 237, 220);
+}
 /* HEADER SECTION*/
 
 nav {
@@ -50,10 +53,8 @@ h1 > a{
 
 .post{
     width: 90%;
-    margin: 10px;
+    margin: 10px auto;
     border: 2px solid rgb(32, 26, 26);
-    border-radius: 10px;
-
 }
 
 .post_title{
@@ -98,12 +99,16 @@ h1 > a{
     border-radius: 15px;
     font-size: 30px;
 }
-.login-form button, .signup-form button {
+.login-form button, .signup-form button, div button {
     color:rgb(187, 237, 220);
     background-color: rgb(32, 26, 26);
     width: 100%;
+    padding: 10px 0;
     outline: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
     font-size: x-large;
+    border-radius: 10px;
 }
 
 #sign-up, #log-in {
@@ -113,3 +118,38 @@ h1 > a{
 .signup-form {
     display: none;
 }
+
+
+/*SINGLEPOST.HANDLEBARS*/
+form div {
+    margin: 0 auto;
+}
+div > textarea {
+    width: 95%;
+    height: 200px;
+    margin: 25px auto;
+    display: block;
+}
+
+.comment-form {
+    width: 90%;
+    margin: 30px auto;
+    border: 2px solid rgb(32, 26, 26);
+}
+
+.comment {
+    width: 90%;
+    border: 2px solid rgb(32, 26, 26);
+    background-color: rgb(32, 26, 26);
+    padding-top: 55px ;
+    margin: 30px auto;
+}
+
+
+
+section div {
+    font-size: xx-large;
+    background-color: rgb(187, 237, 220);
+    padding: 10px 0;
+}
+
