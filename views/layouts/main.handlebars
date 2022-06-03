@@ -12,11 +12,15 @@
   <div class="wrapper">
     <header>
         <nav>
+          {{#if loggedIn}}
+            <a href="/">Home</a>
+            <a href="/dashboard">Dashboard</a>
+            <a href="" id="logout" class="">logout</a>
+            {{else}}
             <a href="/">Home</a>
             <a href="/dashboard">Dashboard</a>
             <a href="/login">login</a>
-            <a href="" id="logout" class="">logout</a>
-          
+            {{/if}}
         </nav>
       <h1 class="app-title">
         <a href="/" class="title">Tech Blog</a>
@@ -29,7 +33,9 @@
       Thanks for visiting!
     </footer>
   </div>
+  {{#if loggedIn}}
 <script src="/javascript/logout.js"></script>
+{{/if}}
 </body>
 
 </html>
