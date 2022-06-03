@@ -13,16 +13,22 @@ router.get('/', (req ,res) => {
 
 // Post a new comment route
 router.post('/', (req, res) =>{
+
+    if (req.session) {
     Comment.create({
         comment_text: req.body.comment_text,
-        user_id: req.body.user_id,
+        user_id: req.session.user_id,
         post_id: req.body.post_id
     })
-    .then(dbCommentData => res.json(dbCommentData))
+    .then(dbCommentData => {
+        console.log(dbCommentData, 'comment data from new comment')
+        res.json(dbCommentData)
+    })
     .catch(err =>  {
         console.log(err, 'error2');
         res.status(500).json(err);
-    });
+    }); 
+    }
 });
 
 // delete a comment route
