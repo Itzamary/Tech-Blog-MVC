@@ -1,0 +1,16 @@
+<article>
+  <h2>
+    Edit Post
+  </h2>
+  <form class="edit-post-form">
+    <div>
+      <input class="post-titles" name="post-title" type="text" value="{{post.title}}" />
+      <textarea id="post-text">{{post.post_text}}</textarea>
+    </div>
+    <button class="edit-post" type="button">Update Post</button>
+    <button type="button" class="delete-post-btn">Delete</button>
+  </form>
+</article>
+<script src="/javascript/manipulate-dom.js"></script>
+<script src="/javascript/edit-post.js"></script>
+<script src="/javascript/delete-post.js"></script>
