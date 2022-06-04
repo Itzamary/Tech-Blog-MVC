@@ -9,6 +9,7 @@ a {
 
 ul {
     list-style: none;
+    padding: 0;
 }
 
 main {
@@ -152,4 +153,41 @@ section div {
     background-color: rgb(187, 237, 220);
     padding: 10px 0;
 }
+
+
+/*DASHBOARDS SECTION*/
+.new-post {
+    width: 90%;
+    margin: 30px auto;
+    border: 2px solid rgb(32, 26, 26);
+}
+form > h2{
+    background-color: rgb(32, 26, 26);
+    color: rgb(187, 237, 220);
+    padding: 20px;
+    margin: 0;
+}
+#post-title, .post-titles {
+    width: 95%;
+    font-size: x-large;
+    margin: 25px auto;
+    display: block;
+}
+
+#post-dashboard {
+    width: 90%;
+    margin: 30px auto;
+    border: 2px solid rgb(32, 26, 26);
+}
+
+article > h2 {
+    background-color: rgb(32, 26, 26);
+    color: rgb(187, 237, 220);
+    padding: 20px;
+}
+
+.new-post-form {
+    display: none;
+};
+
 
