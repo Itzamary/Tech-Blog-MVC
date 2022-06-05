@@ -32,6 +32,33 @@ router.post('/', withAuth, (req, res) =>{
     }
 });
 
+
+// Put route for updating a post
+router.put('/:id', withAuth, (req, res) => {
+    Comment.update(
+        {
+            comment_text: req.body.comment_text
+        },
+        {
+            where: {
+                id: req.params.id
+            }
+        }
+    )
+    .then(dbPostData => {
+        if (!dbPostData) {
+            res.status(404).json({message: 'No post found with this id'});
+            return;
+        }
+        res.json(dbPostData);
+    })
+    .catch(err => {
+        console.log(err, 'error4');
+        res.status(500).json(err);
+    });
+});
+
+
 // delete a comment route
 router.delete('/:id', withAuth, (req, res) => {
     Comment.destroy({
