@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const {Post, User, Comment} = require('../models');
+const withAuth = require('../utils/auth');
 
 router.get('/', (req, res) => {
     Post.findAll({
@@ -95,5 +96,35 @@ router.get('/', (req, res) => {
         res.status(500).json(err);
       });
   });
+
+
+
+  router.get('/edit/:id', withAuth, (req, res) => {
+    Comment.findOne({
+      where: {
+        id: req.params.id
+      },
+      attributes:[
+        'id',
+        'comment_text',
+        'created_at'
+      ], 
+    })
+    .then(dbCommentData => {
+      if (!dbCommentData) {
+        res.status(404).json({message: 'no post found with this id'});
+        return;
+      }
+        const comment = dbCommentData.get({plain: true});
+        res.render('edit-comments', {
+          comment, 
+          loggedIn: true
+        });
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    })
+  })
 
 module.exports = router;
