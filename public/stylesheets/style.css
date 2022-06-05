@@ -6,6 +6,10 @@
 a {
     text-decoration: none;
 }
+a[class="post-comment"] {
+    color: rgb(187, 237, 220);
+    font-size: x-large;
+}
 
 ul {
     list-style: none;
@@ -142,7 +146,7 @@ div > textarea {
     width: 90%;
     border: 2px solid rgb(32, 26, 26);
     background-color: rgb(32, 26, 26);
-    padding-top: 55px ;
+    padding-top: 25px ;
     margin: 30px auto;
 }
 
@@ -186,8 +190,11 @@ article > h2 {
     padding: 20px;
 }
 
+
 .new-post-form {
     display: none;
 };
+
+/*EDIT COMMENT BUTTON*/
 
 
